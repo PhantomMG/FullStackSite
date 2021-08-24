@@ -1,0 +1,124 @@
+<%- include("Header") -%>
+
+
+
+  <%- include("Nav") -%>
+
+    <main class="container">
+      <div class="p-4 p-md-5 mb-4 text-white rounded  big-banner">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 fst-italic">Shop for discounts!
+          </h1>
+          <p class="lead my-3">Looking for the best deals? Check out our offers by category!</p>
+          <p class="lead mb-0"><a href="/Dashboard" class="rounded-pill btn btn-outline-light text-white fw-bold">Click Here</a></p>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-4">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static offer-card">
+              <strong class="d-inline-block mb-2 text-primary">Special offer!</strong>
+              <h3 class="mb-0">
+                <%= specialOffer[0].name %>
+              </h3>
+              <div class="mb-1 text-muted">
+                <%= specialOffer[0].category %>
+              </div>
+              <p class="card-text mb-auto">
+                <%= specialOffer[0].details %>
+              </p>
+              <p class="card-text mb-auto text-muted  text-decoration-line-through">
+                <%= specialOffer[0].price %> $
+              </p>
+              <p class="card-text h4 mb-auto   ">
+                Now for <%= specialOffer[0].price-specialOffer[0].price*specialOffer[0].discount/100%> $!
+              </p>
+              <strong class="d-inline-block mb-4 h3 discount-price">
+                <%= specialOffer[0].discount %> % Off
+              </strong>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static offer-card">
+              <strong class="d-inline-block mb-2 text-primary">Special offer!</strong>
+              <h3 class="mb-0">
+                <%= specialOffer[1].name %>
+              </h3>
+              <div class="mb-1 text-muted">
+                <%= specialOffer[1].category %>
+              </div>
+              <p class="card-text mb-auto">
+                <%= specialOffer[1].details %>
+              </p>
+              <p class="card-text mb-auto text-muted  text-decoration-line-through">
+                <%= specialOffer[1].price %> $
+              </p>
+              <p class="card-text h4 mb-auto   ">
+                Now for only <%= specialOffer[1].price-specialOffer[1].price*specialOffer[1].discount/100 %>$!
+              </p>
+              <strong class="d-inline-block mb-4 h3  discount-price">
+                <%= specialOffer[1].discount %> % Off
+              </strong>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static offer-card">
+              <strong class="d-inline-block mb-2 text-primary">Special offer!</strong>
+              <h3 class="mb-0">
+                <%= specialOffer[2].name %>
+              </h3>
+              <div class="mb-1 text-muted">
+                <%= specialOffer[2].category %>
+              </div>
+              <p class="card-text mb-auto">
+                <%= specialOffer[2].details %>
+              </p>
+              <p class="card-text mb-auto text-muted  text-decoration-line-through">
+                <%= specialOffer[2].price %> $
+              </p>
+              <p class="card-text mb-auto  h4 ">
+                Now for only <%= specialOffer[2].price-specialOffer[2].price*specialOffer[2].discount/100 %>$!
+              </p>
+              <strong class="d-inline-block mb-4 h3 discount-price">
+                <%= specialOffer[2].discount %> % Off
+              </strong>
+
+            </div>
+          </div>
+        </div>
+       
+        
+        
+      </div>
+
+      <div class="row g-5">
+        <div class="col-md-8">
+          <%- include("List") -%>
+        </div>
+
+        <div class="col-md-4">
+          <div class="position-sticky" style="top: 2rem;">
+            <div class="p-4 mb-3  rounded misc-card">
+              <h4 class="fst-italic">About</h4>
+              <p class="mb-0">Hi! My name is Matias Gonzalez. This is a test website made with Node.js, Express, EJS with a mongoDB database. I hope you like it! Please <a class="link-dark" href="https://www.linkedin.com/in/mg2006">contact me</a> if you want to share some ideas! Thanks </p>
+           
+             <p>Feel free to test the UI and the database by adding a new product below</p>
+             <h5 class="fst-italic">Note:</h4> <p>Click on a product to display details</p>
+       
+            </div>
+
+
+     
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include("Footer") -%>

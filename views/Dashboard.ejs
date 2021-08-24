@@ -1,0 +1,165 @@
+<%- include("Header") -%>
+<%- include("Nav") -%>
+    <main class="container">
+
+        <div class="p-4 p-md-5 mb-4  row rounded  big-banner2">
+            <div class="row">
+                <div class="col-md-5 me-auto px-0">
+                    <h2 class="display-6 fst-italic">Quantity per category
+                    </h2>
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Quantity of products</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% categories.forEach((category)=>{ %>
+                                <tr>
+                                    <td>
+                                        <%= category.name %>
+                                    </td>
+                                    <td>
+                                        <%= category.size %>
+                                    </td>
+
+                                </tr>
+                                <% }); %>
+
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="col-md-5 px-0">
+                    <h2 class="display-6 fst-italic">Products per discount
+                    </h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Products</th>
+                                <th>Discount</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% offers.forEach((offer)=>{ %>
+                                <tr>
+                                    <td>
+                                        <%= offer.size %>
+                                    </td>
+                                    <td>
+                                        <%= offer.off %> %
+                                    </td>
+
+                                </tr>
+                                <% }); %>
+
+                        </tbody>
+
+                    </table>
+
+
+
+
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-5 me-auto px-0">
+                    <h2 class="display-6 fst-italic">Maximum discount per category</h2>
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Discount</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% maxOffer.forEach((offer)=>{ %>
+                                <tr>
+                                    <td>
+                                        <%= offer.category %>
+                                    </td>
+                                    <td>
+                                        <%= offer.discountValue %> %
+                                    </td>
+
+                                </tr>
+                                <% }); %>
+
+                        </tbody>
+
+                    </table>
+
+
+
+
+
+                </div>
+                <div class="col-md-5 px-0">
+                    <h2 class="display-6 fst-italic">Minimum discount per category</h2>
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Discount</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% minOffer.forEach((offer)=>{ %>
+                                <tr>
+                                    <td>
+                                        <%= offer.category %>
+                                    </td>
+                                    <td>
+                                        <%= offer.discountValue %> %
+                                    </td>
+
+                                </tr>
+                                <% }); %>
+
+                        </tbody>
+
+                    </table>
+
+
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <%- include("Footer") -%>

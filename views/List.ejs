@@ -1,0 +1,59 @@
+
+
+        <div class="row g-5">
+            <article class="blog-post">
+                <h3>Products</h3>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% products.forEach((product)=>{ %>
+                            <tr>
+                                <td>
+                                   <a href="/<%= product.name %>" class="link-dark"> <%= product.name %> </a>
+                                </td>
+                                <td>
+                                    <%= product.price %> $
+                                </td>
+                                <td>
+                                    <%= product.category %>
+                                </td>
+                                <td>
+                                    <%= product.stock %>
+                                </td>
+                            </tr>
+                            <% }); %>
+
+                    </tbody>
+                   
+                </table>
+                <h3>Add new product:</h3>
+                <form class="product" action="/addproduct" method="post">
+                    <div class="mb-3"> <input class="form-control w-25" type="text" name="productName"
+                            placeholder="New Product" autocomplete="off"></div>
+                    <div class="mb-3"> <input class="form-control w-25" type="text" name="productDetail"
+                            placeholder="Details" autocomplete="off"></div>
+                    <div class="mb-3"> <input class="form-control w-25" type="text" name="productCategory"
+                            placeholder="Category" autocomplete="off"></div>
+                    <div class="mb-3"> <input class="form-control w-25" type="number" name="productPrice"
+                            placeholder="Price" autocomplete="off"></div>
+                    <div class="mb-3"> <input class="form-control w-25" type="number" name="productStock"
+                            placeholder="Stock" autocomplete="off"></div>
+                    <div class="mb-3"> <input class="form-control w-25" type="number" name="productDiscount"
+                            placeholder="Discount" autocomplete="off"></div>
+                    <button class="btn btn-dark " type="submit" name="submitProduct">Add</button>
+                </form>
+
+
+
+
+
+
+        </div>

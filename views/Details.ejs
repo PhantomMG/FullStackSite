@@ -1,0 +1,62 @@
+<%- include("Header") -%>
+    <%- include("Nav") -%>
+
+        <div class="p-4 p-md-5 mb-4 row rounded  big-banner2">
+            <h2 class="mb-3">Detailed Products</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Details</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% products.forEach((product)=>{ %>
+                        <tr>
+                            <td><a href="/<%= product.name %>" class="link-dark">
+                                    <%= product.name %>
+                                </a>
+
+                            </td>
+                            <td class="text-truncate">
+                                <%= product.details %>
+                            </td>
+                            <td>
+                                <%= product.category %>
+                            </td>
+                            <td>
+                                <%= product.price %> $
+                            </td>
+                            <td>
+                                <%= product.stock %>
+                            </td>
+                        </tr>
+                        <% }); %>
+
+                </tbody>
+
+            </table>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <%- include("Footer") -%>

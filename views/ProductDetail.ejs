@@ -1,0 +1,34 @@
+<%- include("Header") -%>
+    <%- include("Nav") -%>
+        <main class="container">
+
+            <div class="p-4 p-md-5 mb-4  row rounded  big-banner2">
+                <h2 class="display-6 fst-italic"> <%= product.name %>
+                </h2>
+                <p class="h3 text-muted"><%= product.category %></p>
+                <p class="h3 fst-italic"><%= product.details %></p>
+                <p class="h3 fst-italic">Price: <%= product.price %> $</p>
+                <p class="h3 fst-italic"><%= product.discount %> % Off</p>
+                <p class="h3 fst-italic">Stock: <%= product.stock %></p>
+            </div>
+
+        </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <%- include("Footer") -%>
